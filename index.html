@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Website WEB</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><img src="images/logoNS.svg" alt="NS Logo">NS Reisverhalen</a>
+                </li>
+                <li>
+                    <a href="opgeslagen.html"><img src="images/opgeslagen.svg" alt="opgeslagen icon">
+                        <div>Opgeslagen</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="inloggen.html"><img src="images/mijnNS.png" alt="mijnNS icon">
+                        <div>Mijn NS</div>
+                    </a>
+                </li>
+                <li>
+                    <img class="open pointer" src="images/hamburger.svg" alt="hamburger menu">
+                </li>
+            </ul>
+        </nav>
+
+        <div class="overlay">
+
+            <a class="dicht pointer"><img src="images/kruis.svg" alt="kruis menu icon"></a>
+
+            <div>
+                <a href="opgeslagen.html"><img src="images/opgeslagenWit.svg" alt="opgeslagen icon">Opgeslagen</a>
+                <a href="inloggen.html"><img src="images/mijnNSWit.svg" alt="mijnNS icon">Mijn NS</a>
+            </div>
+        </div>
+
+    </header>
+    <main>
+
+        <!-- https://codepen.io/shooft/pen/eYYNJrJ -->
+        <form>
+            <h1>Verhaal zoeken</h1>
+
+            <section>
+                <label for="search" class="hidden">Zoeken</label>
+
+                <input type="search" name="search" placeholder="Verhalen zoeken ..." autocomplete="off" required>
+                <button class="pointer" type="submit" aria-label="Search"> <img src="images/zoeken.png" alt="zoeken icon">
+                    <div>Zoeken</div>
+                </button>
+            </section>
+
+            <section class="pointer">
+                <select class="pointer">
+                    <option>Tijd</option>
+                    <option>0-5 min</option>
+                    <option>5-10 min</option>
+                    <option>10-15 min</option>
+                    <option>15-20 min</option>
+                </select>
+
+                <select class="pointer">
+                    <option>Populariteit</option>
+                    <option>Best beoordeeld</option>
+                    <option>Meest gelezen</option>
+                </select>
+
+                <select class="pointer">
+                    <option>Alfabetisch</option>
+                    <option>A-Z</option>
+                    <option>Z-A</option>
+                </select>
+
+                <select class="pointer">
+                    <option>Genre</option>
+                    <option>Liefde</option>
+                    <option>Detective</option>
+                    <option>Science Fiction</option>
+                    <option>Thrillers</option>
+                    <option>Humor</option>
+                </select>
+
+                <div class="filterKnop">
+                    Filter &amp; Sorteer <img src="images/filter.svg" alt="filter icon">
+                </div>
+            </section>
+        </form>
+
+        <div class="filterAan">
+            <select class="pointer">
+                <option>Tijd</option>
+                <option>0-5 min</option>
+                <option>5-10 min</option>
+                <option>10-15 min</option>
+                <option>15-20 min</option>
+            </select>
+
+            <select class="pointer">
+                <option>Populariteit</option>
+                <option>Best beoordeeld</option>
+                <option>Meest gelezen</option>
+            </select>
+
+            <select class="pointer">
+                <option>Alfabetisch</option>
+                <option>A-Z</option>
+                <option>Z-A</option>
+            </select>
+
+            <select class="pointer">
+                <option>Genre</option>
+                <option>Liefde</option>
+                <option>Detective</option>
+                <option>Science Fiction</option>
+                <option>Thrillers</option>
+                <option>Humor</option>
+            </select>
+        </div>
+
+
+
+        <section>
+            <h1>
+            Verder lezen
+        </h1>
+            <a href="verhaal01.html">
+                <article>
+                    <img src="images/imageMiddel24.png" alt="artikel foto">
+                    <h2>Alwetende verteller</h2>
+                    <footer>
+                        <ul class="eersteUL">
+                            <li><img src="images/tijd.png" alt="tijd icon">nog 7 minuten</li>
+                            <li><img src="images/thema.png" alt="thema icon">avontuurlijk, leuk &amp; sportief</li>
+                        </ul>
+                        <ul>
+                            <li><img src="images/sterDicht.png" alt="ster1"></li>
+                            <li><img src="images/sterDicht.png" alt="ster2"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterOpen.png" alt="ster3"></li>
+                            <li>4</li>
+                            <li><img src="images/pijlDBlauw2.png" alt="naar verhaal icon"></li>
+                        </ul>
+                    </footer>
+                </article>
+            </a>
+        </section>
+
+        <section>
+            <h1>Verhalen</h1>
+
+            <a href="verhaal01.html">
+                <article>
+                    <img src="images/imageMiddel24.png" alt="artikel foto">
+                    <h2>Alwetende verteller</h2>
+                    <footer>
+                        <ul class="eersteUL">
+                            <li><img src="images/tijd.png" alt="tijd icon">13 minuten</li>
+                            <li><img src="images/thema.png" alt="thema icon">verassend, leuk &amp; sportief</li>
+                        </ul>
+                        <ul>
+                            <li><img src="images/sterDicht.png" alt="ster1"></li>
+                            <li><img src="images/sterDicht.png" alt="ster2"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterOpen.png" alt="ster3"></li>
+                            <li>4</li>
+                            <li><img src="images/pijlDBlauw2.png" alt="verhaal lezen icon"></li>
+                        </ul>
+                    </footer>
+                </article>
+            </a>
+
+            <a href="verhaal01.html">
+                <article>
+                    <img src="images/imageMiddel18.png" alt="artikel foto">
+                    <h2>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij ‘de kids’</h2>
+                    <footer>
+                        <ul class="eersteUL">
+                            <li><img src="images/tijd.png" alt="tijd icon">6 minuten</li>
+                            <li><img src="images/thema.png" alt="thema icon">avontuurlijk, jong &amp; radeloos</li>
+                        </ul>
+                        <ul>
+                            <li><img src="images/sterDicht.png" alt="ster1"></li>
+                            <li><img src="images/sterDicht.png" alt="ster2"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li>5</li>
+                            <li><img src="images/pijlDBlauw2.png" alt="naar verhaal icon"></li>
+                        </ul>
+                    </footer>
+                </article>
+            </a>
+
+
+            <a href="verward.html">
+                <article>
+                    <img src="images/imageMiddel19.png" alt="artikel foto">
+                    <h2>De verwarde man</h2>
+                    <footer>
+                        <ul class="eersteUL">
+                            <li><img src="images/tijd.png" alt="tijd icon">18 minuten</li>
+                            <li><img src="images/thema.png" alt="thema icon">vaag, verward &amp; onbewust</li>
+                        </ul>
+                        <ul>
+                            <li><img src="images/sterDicht.png" alt="ster1"></li>
+                            <li><img src="images/sterDicht.png" alt="ster2"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterOpen.png" alt="ster3"></li>
+                            <li><img src="images/sterOpen.png" alt="ster3"></li>
+                            <li>3</li>
+                            <li><img src="images/pijlDBlauw2.png" alt="naar verhaal icon"></li>
+                        </ul>
+                    </footer>
+                </article>
+            </a>
+
+            <a href="verhaal01.html">
+                <article>
+                    <img src="images/imageMiddel20.png" alt="artikel foto">
+                    <h2>De Cock en het raadsel van het verdwenen boek</h2>
+                    <footer>
+                        <ul class="eersteUL">
+                            <li><img src="images/tijd.png" alt="tijd icon">12 minuten</li>
+                            <li><img src="images/thema.png" alt="thema icon">mysterieus, spannend &amp; gek</li>
+                        </ul>
+                        <ul>
+                            <li><img src="images/sterDicht.png" alt="ster1"></li>
+                            <li><img src="images/sterDicht.png" alt="ster2"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterOpen.png" alt="ster3"></li>
+                            <li>4</li>
+                            <li><img src="images/pijlDBlauw2.png" alt="naar verhaal icon"></li>
+                        </ul>
+                    </footer>
+                </article>
+            </a>
+
+            <a href="verhaal01.html">
+                <article>
+                    <img src="images/imageMiddel23.png" alt="artikel foto">
+                    <h2>Toeristische route</h2>
+                    <footer>
+                        <ul class="eersteUL">
+                            <li><img src="images/tijd.png" alt="tijd icon">8 minuten</li>
+                            <li><img src="images/thema.png" alt="thema icon">lief, vreemd &amp; onwetend</li>
+                        </ul>
+                        <ul>
+                            <li><img src="images/sterDicht.png" alt="ster1"></li>
+                            <li><img src="images/sterDicht.png" alt="ster2"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterOpen.png" alt="ster3"></li>
+                            <li>4</li>
+                            <li><img src="images/pijlDBlauw2.png" alt="naar verhaal icon"></li>
+                        </ul>
+                    </footer>
+                </article>
+            </a>
+
+            <a href="verhaal01.html">
+                <article>
+                    <img src="images/imageMiddel22.png" alt="artikel foto">
+                    <h2>Ollekebolleke</h2>
+                    <footer>
+                        <ul class="eersteUL">
+                            <li><img src="images/tijd.png" alt="tijd icon">20 minuten</li>
+                            <li><img src="images/thema.png" alt="thema icon">knullig, grappig &amp; gretig</li>
+                        </ul>
+                        <ul>
+                            <li><img src="images/sterDicht.png" alt="ster1"></li>
+                            <li><img src="images/sterDicht.png" alt="ster2"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li><img src="images/sterDicht.png" alt="ster3"></li>
+                            <li>5</li>
+                            <li><img src="images/pijlDBlauw2.png" alt="naar verhaal icon"></li>
+                        </ul>
+                    </footer>
+                </article>
+            </a>
+        </section>
+
+
+    </main>
+    <footer>
+        <p>NS Reisverhalen - Pim Melman 2020</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,849 @@
+/*kleurenscheme van https://colorhunt.co/palette/159233 */
+
+
+/* Algemeen */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto:100', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e9;
+}
+
+
+/* Header+Nav */
+
+header {
+    box-shadow: 0 0.125em 0 0 lightgray;
+    background-color: white;
+    position: relative;
+    z-index: 5;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    max-width: 64em;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+header li {
+    margin-left: 1em;
+}
+
+header li a {
+    display: flex;
+    align-items: center;
+}
+
+header li:nth-of-type(4) {
+    display: none;
+}
+
+header img {
+    height: 1.25em;
+    margin-right: 0.5em;
+}
+
+header nav {
+    padding: 1.25em 2em;
+}
+
+header nav li:nth-of-type(1) {
+    flex-grow: 1;
+    margin-left: 0;
+}
+
+
+/* formulier https://codepen.io/shooft/pen/jONJPON */
+
+form {
+    background-color: #ffc917;
+    padding: 2em 3em;
+    padding-top: 1em;
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.geleAchtergrond {
+    background-color: #ffc917;
+}
+
+input {
+    display: inline;
+    width: 100%;
+    max-width: 32.75em;
+    margin: 0;
+    font-size: 1em;
+    padding: 0.75em;
+    border-radius: 0.3em;
+    border: none;
+}
+
+section:first-of-type button {
+    font-size: 1em;
+    padding: 0.75em 1.5em;
+    padding-top: 0.375em;
+    background: #0079d3;
+    color: white;
+    border-radius: 0.3em;
+    border: 0;
+    margin-left: 1em;
+    width: 10.25em;
+    transition: 0.3s;
+}
+
+section:first-of-type button:hover {
+    box-shadow: inset 0 -3em 0 #005ca0;
+}
+
+form section:last-child div {
+    display: none;
+    -webkit-appearance: none;
+    /* zodat iOS/Safari eigen styling niet opdringt */
+    font-size: 1em;
+    padding: 0.75em 1.5em;
+    padding-top: 0.375em;
+    background: #0079d3;
+    color: white;
+    border-radius: 0.3em;
+    border: 0;
+    width: 100%;
+    transition: 0.3s;
+}
+
+form section:last-child div:hover {
+    box-shadow: inset 0 -3em 0 #005ca0;
+}
+
+button div {
+    display: inline;
+}
+
+form div img,
+button img {
+    height: 1.25em;
+    margin: 0;
+    margin-right: 0.5em;
+    padding: 0;
+    position: relative;
+    top: 0.3em;
+}
+
+form div img {
+    margin-left: 0.5em;
+    margin-right: 0;
+}
+
+.hidden {
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+
+/* class applies to select element itself, not a wrapper element */
+
+form section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 44.25em;
+    margin: auto;
+    margin-top: 1em;
+}
+
+main > div select,
+section select {
+    font-size: 1em;
+    color: #444;
+    background-color: white;
+    padding: 0.65em;
+    width: 100%;
+    margin: 0;
+    border-color: white;
+    border-radius: 0.3em;
+    -webkit-appearance: none;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+section select:first-child {
+    margin-left: 0;
+}
+
+section select:nth-of-type(4) {
+    margin-right: 0;
+}
+
+
+/* Hover style */
+
+section select:hover {
+    border-color: rgb(229, 181, 51);
+}
+
+
+/* Focus style */
+
+section select:focus {
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+}
+
+
+/* filter met javascript */
+
+.filterAan {
+    transition: 0.5s ease-out;
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffc917;
+    transform: translate(0em, -20em);
+    padding-bottom: 2em;
+    position: absolute;
+    z-index: 1;
+    border-bottom: 0.2em solid rgba(0, 0, 0, .1);
+
+}
+
+.filterAan.active {
+    transform: translate(0em, 13.5em);
+
+}
+
+main > div select {
+    display: block;
+    margin: 0.5em 0;
+    width: 70%;
+    max-width: 38.5em;
+}
+
+
+/* header overlay - bron: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay2 */
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.klapuit {
+    height: 100%;
+}
+
+.overlay div {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.overlay div img {
+    position: relative;
+    top: 0.25em;
+}
+
+.overlay a {
+    padding: 0.5em;
+    text-decoration: none;
+    font-size: 2em;
+    display: block;
+    transition: 0.3s ease-in-out;
+    color: white;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #ffc917;
+}
+
+.overlay .dicht {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+}
+
+@media (max-height: 28em) {
+    .overlay {
+        overflow-y: auto;
+    }
+    .overlay a {
+        font-size: 1em
+    }
+    .overlay .closebtn {
+        font-size: 2.5px;
+        top: 1em;
+        right: 1em;
+    }
+}
+
+
+/* links + knoppen */
+
+a {
+    text-decoration: none;
+    color: #003082;
+}
+
+a:visited {
+    color: #003082;
+}
+
+.overlay a {
+    color: white;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* section koppen*/
+
+h1 {
+    width: 100%;
+    text-align: center;
+    color: #003082;
+    font-size: 2em;
+    margin-bottom: 0;
+    margin-top: 0.5;
+    font-weight: 500;
+}
+
+form h1 {
+    margin-bottom: 0.5em;
+}
+
+section:last-of-type h1 {
+    margin-top: 0;
+}
+
+
+/* article */
+
+article footer {
+    padding: 1em;
+}
+
+main > section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1em 2em;
+}
+
+main article {
+    max-width: 20em;
+    min-width: 20em;
+    box-shadow: 0 0.125em 0 0 lightgray;
+    background-color: white;
+    margin: 1em;
+    height: auto;
+}
+
+article > img {
+    max-width: 20em;
+    min-width: 20em;
+    margin: 0;
+    padding: 0;
+}
+
+article h2 {
+    white-space: nowrap;
+    margin: 0 0.75em;
+    margin-top: 0.5em;
+    color: #003082;
+    font-family: 'Roboto:100', sans-serif;
+    font-weight: 300;
+    height: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+footer ul {
+    padding: 0;
+    margin: 0 0.25em;
+    color: #0063d3;
+    font-weight: 300;
+}
+
+footer img {
+    width: 1.75em;
+    margin-right: 0.75em;
+}
+
+.eersteUL li:first-child {
+    margin-bottom: 1em;
+}
+
+.eersteUL li img {
+    position: relative;
+    top: 0.25em;
+}
+
+.eersteUL li:first-child img {
+    position: relative;
+    top: 0.5em;
+}
+
+footer ul:nth-of-type(2) {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    margin-top: 1.5em;
+    line-height: 2em;
+}
+
+article footer li:nth-of-type(7) img {
+    width: auto;
+    height: 1.25em;
+    position: relative;
+    left: 2.5em;
+    top: 0.25em;
+    transition: 0.1s linear;
+}
+
+article footer li:nth-of-type(7) img:hover {
+    left: 3em;
+}
+
+main {
+    background-color: #e6e6e9;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* media queries */
+
+
+/* bron: https://css-tricks.com/useful-nth-child-recipies/ */
+
+@media (max-width: 70em) {
+    header li div {
+        display: none;
+    }
+    button div {
+        display: none;
+    }
+    button {
+        width: auto;
+    }
+    button img {
+        margin-right: 0;
+        padding: 0 2.35em;
+    }
+    form section {
+        max-width: 38.5em;
+    }
+}
+
+@media (max-width: 48em) {
+    header li:nth-of-type(2) {
+        display: none;
+    }
+    header li:nth-of-type(3) {
+        display: none;
+    }
+    header li:nth-of-type(4) {
+        display: flex;
+    }
+    button img {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    section select {
+        display: none;
+    }
+    form section:last-child div {
+        display: block;
+    }
+
+    .filterAan {
+        display: flex;
+    }
+}
+
+
+/* verhaal microinteractie - bron: https://github.com/nitemarket/floating-button-menu*/
+
+.plus{
+    width: 1.15em;
+    border-radius: 1em;
+    padding-bottom: 0.6em;
+    padding-top: 0.5em;
+    line-height: 0;
+    background-color: #ffc917;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    transition: all 0.1s ease-in-out;
+}
+
+.plus:hover {
+    transform: scale(1.1);
+}
+
+.fotoVerhalen button:nth-of-type(-n+3) {
+    width: 1.15em;
+    border-radius: 1em;
+    padding-bottom: 0.6em;
+    padding-top: 0.5em;
+    line-height: 0;
+    background-color: #0063d3;
+    font-size: 2em;
+    color: white;
+    border: none;
+    text-align: center;
+    position: fixed;
+    right: 1.8em;
+    bottom: 1.8em;
+    transition: 0.5s;
+}
+
+#opslaanKnop.show {
+    bottom: 6em;
+}
+
+#sterKnop.show {
+    bottom: 4.7em;
+}
+
+#delenKnop.show {
+   bottom: 3.4em;
+}
+
+#sterKnop > img, #opslaanKnop > img, #delenKnop > img {
+    width: 0.75em;
+    height: auto;
+    position: absolute;
+    right: 0.2em;
+    top: 0.175em;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* verhaal img + media queries */
+
+.fotoVerhalen {
+    max-width: 100%;
+    height: auto;
+}
+
+#verhalenPNG1 {
+    display: none;
+    max-width: 100%;
+}
+
+#verhalenPNG2 {
+    display: none;
+    max-width: 100%;
+}
+
+#verhalenPNG3 {
+    display: none;
+    max-width: 100%;
+}
+
+@media (min-width: 61.5em) {
+    #verhalenPNG1 {
+        display: block;
+    }
+    #verhalenPNG2 {
+        display: none;
+    }
+
+    #verhalenPNG3 {
+        display: none;
+    }
+}
+
+@media (max-width: 61.5em) {
+    #verhalenPNG1 {
+        display: none;
+    }
+    #verhalenPNG2 {
+        display: block;
+    }
+
+    #verhalenPNG3 {
+        display: none;
+    }
+}
+
+@media (max-width: 32em) {
+    #verhalenPNG1 {
+        display: none;
+    }
+    #verhalenPNG2 {
+        display: none;
+    }
+    #verhalenPNG3 {
+        display: block;
+    }
+
+}
+
+
+
+
+
+
+/* formulier mijnNS*/
+
+.mijnNSForm {
+    padding: 2em 3em;
+    padding-top: 2em;
+    text-align: left;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.mijnNSForm fieldset {
+    background-color: white;
+    border: none;
+    padding: 1em;
+    max-width: 30em;
+}
+
+.mijnNSForm fieldset > fieldset:first-of-type {
+    margin-top: 1.5em;
+}
+
+.mijnNSForm fieldset:first-child {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-bottom: solid 0.2em;
+    border-color: rgb(212, 167, 49);
+}
+
+
+.mijnNSForm input {
+    margin-bottom: 0.75em;
+    padding: 0.5em;
+    margin-top: 0.25em;
+    width: 100%;
+    z-index: 2;
+    border: lightgray solid 0.1em;
+    transition: 0.5s ease;
+}
+
+.mijnNSForm input:focus {
+    background-color: #e6e6e6;
+    outline: none;
+}
+
+.mijnNSForm input[type="radio"] {
+    width: auto;
+    margin-right: 1em;
+    margin-left: 0.25em;
+}
+
+.mijnNSForm input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.25em;
+}
+
+.mijnNSForm button {
+    display: inline;
+    font-size: 1em;
+    padding: 0.75em 1.5em;
+    background: #0079d3;
+    color: white;
+    border-radius: 0.3em;
+    border: 0;
+    margin-left: 1em;
+    width: 10em;
+    transition: 0.3s;
+}
+
+.mijnNSForm button:hover {
+    box-shadow: inset 0 -3em 0 #005ca0;
+    }
+
+.mijnNSForm legend {
+    font-size: 1.25em;
+    color: darkblue;
+    padding: 0;
+}
+
+fieldset > label {
+    margin-bottom: 1em;
+}
+
+form > fieldset > label {
+    margin-left: 0.5em;
+    font-size: 2em;
+    color: #003082;
+    margin-bottom: 2em;
+    margin-top: 0.5;
+    font-weight: 500;
+}
+
+.mijnNSForm fieldset > a {
+    margin-left: 1em;
+}
+
+.mijnNSForm a:hover {
+    text-decoration: underline;
+}
+
+
+/* footer */
+
+body > footer {
+    padding: 0.75em;
+    background-color: white;
+    text-align: center;
+    color: #003082;
+    font-size: 0.8em;
+}
+
+.bottomFooter {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* verward */
+
+.verward:hover {
+    transition: 2s;
+    background: linear-gradient(180deg,#ff8a00,#e52e71);
+}
+
+.verward main p {
+    max-width: 10em;
+    margin: 1em;
+    transition: 2s;
+    animation: skew 3s infinite;
+    animation-direction: alternate;
+    padding-top: 3em;
+    text-align: center;
+}
+
+@keyframes skew {
+  0% {
+    transform: skew(20deg, 20deg);
+  }
+  100% {
+    transform: skew(-20deg, -20deg);
+  }
+}
+
+.verward div {
+    width: 100%;
+}
+
+.verward h1 {
+    max-width: 5em;
+    max-height: 1em;
+    margin: auto;
+    margin-top: 1em;
+    overflow: scroll;
+}
+
+.verward main p:hover {
+    color: hotpink;
+    margin-top: 35em;
+    text-shadow: 1em dotted blue;
+    padding-top: 0;
+}
+
+.nerd {
+    transform: scaleX(10);
+    position: absolute;
+    bottom: 10em;
+    display: block;
+    transform:  rotate(180deg);
+}
+
+.nerd:hover {
+   background-color: burlywood;
+    color: black;
+    border: 6em solid green;
+    border-radius: 10em;
+}
+
+.verward button {
+    display: block;
+    width: 100%;
+    transition: 2s;
+    padding: 1em;
+    background-color: darkcyan;
+    color: white;
+}
+
+.verward button:hover {
+    transform: scaleY(6) scaleX(0.4) rotate(180deg);
+}
+
+.verward h2 {
+    width: 80%;
+    text-align: center;
+    text-shadow: 0em 4em white;
+    transition: 0.1s 1s;
+}
+
+.verward h2:hover {
+    text-shadow: -4em 1em blue;
+    transform: rotate(1800deg)
+}
+
+.geenMuis {
+    cursor: none;
+}
+
+.laden {
+    cursor: wait;
+}
+
+.verward .bottomFooter {
+    transition: 60s;
+}
+
+.verward .bottomFooter:hover {
+    bottom: 60em;
+    background-color: black;
+    color: white;
+    padding-bottom: 180em;
+}
+
+.weg {
+    position: absolute;
+    bottom: 2em;
+}

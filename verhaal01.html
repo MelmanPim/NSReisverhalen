@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Website WEB</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><img src="images/logoNS.svg" alt="NS Logo">NS Reisverhalen</a>
+                </li>
+                <li>
+                    <a href="opgeslagen.html"><img src="images/opgeslagen.svg" alt="opgeslagen icon">
+                        <div>Opgeslagen</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="inloggen.html"><img src="images/mijnNS.png" alt="mijnNS icon">
+                        <div>Mijn NS</div>
+                    </a>
+                </li>
+                <li>
+                    <img class="open pointer" src="images/hamburger.svg" alt="hamburger menu">
+                </li>
+            </ul>
+        </nav>
+
+        <div class="overlay">
+
+            <a class="dicht pointer"><img src="images/kruis.svg" alt="kruis menu icon"></a>
+
+            <div>
+                <a href="opgeslagen.html"><img src="images/opgeslagenWit.svg" alt="opgeslagen icon">Opgeslagen</a>
+                <a href="inloggen.html"><img src="images/mijnNSWit.svg" alt="mijnNS icon">Mijn NS</a>
+            </div>
+        </div>
+
+    </header>
+    <main class="fotoVerhalen">
+        <!-- bron: https://github.com/nitemarket/floating-button-menu -->
+
+        <button id="opslaanKnop"><img src="images/opgeslagenWitDicht.svg" alt="opgeslagen icon"></button>
+
+        <button id="sterKnop"><img src="images/sterWit.svg" alt="ster"></button>
+
+        <button id="delenKnop"><img src="images/delen.svg" alt="delen"></button>
+
+        <button class="plus"> &#43; </button>
+
+
+
+
+        <img id="verhalenPNG1" src="images/desktopVerhaal.png" alt="Desktop verhaal">
+        <img id="verhalenPNG2" src="images/ipadVerhaal.png" alt="Desktop verhaal">
+        <img id="verhalenPNG3" src="images/mobielVerhaal.png" alt="Desktop verhaal">
+    </main>
+    <footer>
+        <p>NS Reisverhalen - Pim Melman 2020</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
